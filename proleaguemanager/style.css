@@ -290,57 +290,6 @@ body {
   max-width: 1060px;
 }
 
-/* Number markers */
-
-.marker {
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  width: 32px;
-  height: 32px;
-  align-items: center;
-  justify-content: center;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  background: var(--guide-marker);
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.22);
-  font-size: 14px;
-  font-weight: 800;
-}
-
-/*
-   00.ModeSelectionWindow.png
-   실제 화면을 보고 필요하면 left/top 값만 조금씩 조정하면 됩니다.
-*/
-.marker-mode-1 { left: 14%; top: 52%; }
-.marker-mode-2 { left: 62%; top: 52%; }
-.marker-mode-3 { left: 60.5%; top: 27.5%; }
-
-/*
-   02.OrganizerMode.png
-   번호 기준:
-   1 참가자 / 2 팀선정 / 3 맵 / 4 펀딩 / 5 하단 기능 버튼 / 6 참가자 펀딩 순위
-*/
-.organizer-1 { left: 60%; top: 7.5%; }
-.organizer-2 { left: 64%; top: 30%; }
-.organizer-3 { left: 8%; top: 69%; }
-.organizer-4 { left: 62%; top: 64.5%; }
-.organizer-5 { left: 2.8%; top: 96.2%; }
-.organizer-6 { left: 18%; top: 7.5%; }
-
-/*
-   03.ParticipantMode.png
-   번호 기준:
-   1 참가자 / 2 팀선정 / 3 맵 / 4 펀딩 / 5 하단 기능 버튼 / 7 Memo
-*/
-.participant-1 { left: 60%; top: 7.5%; }
-.participant-2 { left: 64%; top: 30%; }
-.participant-3 { left: 8%; top: 69%; }
-.participant-4 { left: 18%; top: 7.5%; }
-.participant-5 { left: 2.8%; top: 96.2%; }
-.participant-7 { left: 62%; top: 64.5%; }
 
 /* =========================================================
    Feature descriptions
@@ -378,7 +327,9 @@ body {
   justify-content: center;
   color: #ffffff;
   background: var(--guide-marker);
+  border: 2px solid #ffffff;
   border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.14);
   font-size: 13px;
   font-weight: 800;
 }
@@ -402,13 +353,34 @@ body {
 }
 
 .organizer-only {
-  border-color: #dbeafe;
-  background: #f8fbff;
+  border-color: #bfdbfe;
+  background: #eff6ff;
+  box-shadow: inset 4px 0 0 var(--organizer);
 }
 
 .participant-only {
-  border-color: #ccfbf1;
-  background: #f7fffd;
+  border-color: #a7f3d0;
+  background: #ecfdf5;
+  box-shadow: inset 4px 0 0 var(--participant);
+}
+
+.organizer-only h4 small,
+.participant-only h4 small {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border-radius: 999px;
+  line-height: 1.35;
+}
+
+.organizer-only h4 small {
+  color: var(--organizer);
+  background: #dbeafe;
+}
+
+.participant-only h4 small {
+  color: var(--participant);
+  background: #d1fae5;
 }
 
 /* =========================================================
@@ -450,12 +422,15 @@ body {
 
 .note {
   margin: 18px 0 0;
-  padding: 13px 15px;
-  color: #475569;
-  background: #f8fafc;
-  border-left: 4px solid #94a3b8;
-  border-radius: 8px;
+  padding: 14px 16px;
+  color: #334155;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-left: 4px solid #3b82f6;
+  border-radius: 9px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.06);
   font-size: 14px;
+  font-weight: 600;
 }
 
 /* =========================================================
@@ -537,12 +512,6 @@ details.guide-details[open] summary::after {
   .content-card {
     padding: 22px;
   }
-
-  .marker {
-    width: 28px;
-    height: 28px;
-    font-size: 12px;
-  }
 }
 
 @media (max-width: 520px) {
@@ -579,12 +548,5 @@ details.guide-details[open] summary::after {
 
   .screenshot-wrap {
     border-radius: 12px;
-  }
-
-  .marker {
-    width: 24px;
-    height: 24px;
-    border-width: 1.5px;
-    font-size: 11px;
   }
 }
