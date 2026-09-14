@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Proleague Manager 다운로드 및 사용 설명서">
   <title>Proleague Manager</title>
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=15">
 </head>
 <body>
 
   <header class="hero">
     <div class="hero-inner">
-      <div class="hero-kicker">PROLEAGUE MANAGER</div>
-      <h1>Proleague Manager</h1>
+      <img
+        class="hero-brand-lockup"
+        src="images/BrandLockup.png"
+        alt="Proleague Manager"
+      >
       <p class="hero-description">
         프로리그 진행과 펀딩 집계를 위한 운영 보조 프로그램입니다.
       </p>
@@ -22,8 +25,58 @@
         <a class="button button-primary" href="#">다운로드</a>
         <a class="button button-secondary" href="#manual">사용 설명서 ↓</a>
       </div>
+
+      <div class="hero-previews">
+        <figure class="hero-preview">
+          <img
+            src="images/Hero_OrganizerMax.png"
+            alt="Proleague Manager 진행자 모드 최대화 화면"
+          >
+          <figcaption>진행자 모드</figcaption>
+        </figure>
+
+        <figure class="hero-preview">
+          <img
+            src="images/Hero_ParticipantMax.png"
+            alt="Proleague Manager 참가자 모드 최대화 화면"
+          >
+          <figcaption>참가자 모드</figcaption>
+        </figure>
+      </div>
     </div>
   </header>
+
+  <nav class="guide-sidebar" aria-labelledby="guide-sidebar-title" aria-hidden="true">
+    <div id="guide-sidebar-title" class="guide-sidebar-title">목차</div>
+
+    <a class="guide-sidebar-link" href="#getting-started">
+      <span class="guide-sidebar-number">1</span>
+      <span>시작하기</span>
+    </a>
+    <a class="guide-sidebar-link" href="#screen-layout">
+      <span class="guide-sidebar-number">2</span>
+      <span>화면 구성</span>
+    </a>
+    <a class="guide-sidebar-link" href="#feature-guide">
+      <span class="guide-sidebar-number">3</span>
+      <span>기능별 안내</span>
+    </a>
+
+    <div class="guide-sidebar-subitems">
+      <a class="guide-sidebar-link" href="#feature-participant" data-open-details>
+        <span class="guide-sidebar-number">3.1</span>
+        <span>참가자</span>
+      </a>
+      <a class="guide-sidebar-link" href="#feature-team" data-open-details>
+        <span class="guide-sidebar-number">3.2</span>
+        <span>팀선정</span>
+      </a>
+      <a class="guide-sidebar-link" href="#feature-map" data-open-details>
+        <span class="guide-sidebar-number">3.3</span>
+        <span>맵</span>
+      </a>
+    </div>
+  </nav>
 
   <main id="manual" class="manual">
 
@@ -37,15 +90,15 @@
 
     <nav class="manual-toc" aria-label="사용 설명서 목차">
       <a href="#getting-started">
-        <span class="toc-number">01</span>
+        <span class="toc-number">1</span>
         <span>시작하기</span>
       </a>
       <a href="#screen-layout">
-        <span class="toc-number">02</span>
+        <span class="toc-number">2</span>
         <span>화면 구성</span>
       </a>
       <a href="#feature-guide">
-        <span class="toc-number">03</span>
+        <span class="toc-number">3</span>
         <span>기능별 안내</span>
       </a>
     </nav>
@@ -53,7 +106,7 @@
     <!-- 01 시작하기 -->
     <section id="getting-started" class="guide-section">
       <div class="section-title-row">
-        <span class="section-number">01</span>
+        <span class="section-number">1</span>
         <div>
           <h2>시작하기</h2>
           <p>프로그램을 실행한 뒤 사용할 모드와 사용자명을 설정합니다.</p>
@@ -119,7 +172,7 @@
     <!-- 02 화면 구성 -->
     <section id="screen-layout" class="guide-section">
       <div class="section-title-row">
-        <span class="section-number">02</span>
+        <span class="section-number">2</span>
         <div>
           <h2>화면 구성</h2>
           <p>진행자 모드와 참가자 모드의 주요 영역을 확인합니다.</p>
@@ -224,16 +277,16 @@
     <!-- 03 기능별 안내 -->
     <section id="feature-guide" class="guide-section">
       <div class="section-title-row">
-        <span class="section-number">03</span>
+        <span class="section-number">3</span>
         <div>
           <h2>기능별 안내</h2>
           <p>화면 구성에서 소개한 주요 기능의 사용 방법을 자세히 확인합니다.</p>
         </div>
       </div>
 
-      <details class="guide-details">
+      <details id="feature-participant" class="guide-details">
         <summary>
-          <span class="detail-index">01</span>
+          <span class="detail-index">3.1</span>
           <span class="detail-title">참가자</span>
         </summary>
 
@@ -254,7 +307,7 @@
               <span class="feature-number">1</span>
               <div>
                 <h4>종족 라벨</h4>
-                <p>테란·토스·저그 중 수정할 종족을 선택합니다.</p>
+                <p>테란·토스·저그 중 참가자 목록을 수정할 종족을 선택합니다.</p>
               </div>
             </div>
 
@@ -288,19 +341,20 @@
               종족별 참가자를 입력하고 기존 목록에 참가자를 추가하는 과정을 확인할 수 있습니다.
             </p>
 
-            <div class="video-wrap participant-video">
-              <video controls preload="metadata" playsinline aria-label="종족별 참가자 입력 방법 영상">
+            <div class="video-wrap participant-video playable-video">
+              <video preload="auto" playsinline aria-label="종족별 참가자 입력 방법 영상">
                 <source src="images/06.ParticipantList.mp4" type="video/mp4">
                 이 브라우저에서는 영상을 재생할 수 없습니다.
               </video>
+              <button class="video-play-button" type="button" aria-label="종족별 참가자 입력 방법 영상 재생"></button>
             </div>
           </div>
         </div>
       </details>
 
-      <details class="guide-details">
+      <details id="feature-team" class="guide-details">
         <summary>
-          <span class="detail-index">02</span>
+          <span class="detail-index">3.2</span>
           <span class="detail-title">팀선정</span>
         </summary>
 
@@ -348,11 +402,12 @@
               옮길 참가자를 마우스 왼쪽 버튼으로 클릭한 다음 1팀 또는 2팀을 클릭합니다.
             </p>
 
-            <div class="video-wrap team-video">
-              <video controls preload="metadata" playsinline aria-label="참가자를 먼저 선택한 뒤 팀을 선택하는 방법 영상">
+            <div class="video-wrap team-video playable-video">
+              <video preload="auto" playsinline aria-label="참가자를 먼저 선택한 뒤 팀을 선택하는 방법 영상">
                 <source src="images/07.Participant-Team.mp4" type="video/mp4">
                 이 브라우저에서는 영상을 재생할 수 없습니다.
               </video>
+              <button class="video-play-button" type="button" aria-label="참가자를 먼저 선택한 뒤 팀을 선택하는 방법 영상 재생"></button>
             </div>
           </div>
 
@@ -362,11 +417,12 @@
               1팀 또는 2팀을 먼저 클릭한 다음 해당 팀으로 옮길 참가자를 클릭합니다.
             </p>
 
-            <div class="video-wrap team-video">
-              <video controls preload="metadata" playsinline aria-label="팀을 먼저 선택한 뒤 참가자를 선택하는 방법 영상">
+            <div class="video-wrap team-video playable-video">
+              <video preload="auto" playsinline aria-label="팀을 먼저 선택한 뒤 참가자를 선택하는 방법 영상">
                 <source src="images/08.Team-Participant.mp4" type="video/mp4">
                 이 브라우저에서는 영상을 재생할 수 없습니다.
               </video>
+              <button class="video-play-button" type="button" aria-label="팀을 먼저 선택한 뒤 참가자를 선택하는 방법 영상 재생"></button>
             </div>
           </div>
 
@@ -394,11 +450,130 @@
               팀에 잘못 배정한 참가자는 팀선정 영역에서 해당 참가자를 마우스 오른쪽 버튼으로 클릭하면 배정을 취소할 수 있습니다.
             </p>
 
-            <div class="video-wrap team-video">
-              <video controls preload="metadata" playsinline aria-label="팀에 배정된 참가자를 취소하는 방법 영상">
+            <div class="video-wrap team-video playable-video">
+              <video preload="auto" playsinline aria-label="팀에 배정된 참가자를 취소하는 방법 영상">
                 <source src="images/09.TeamCancel.mp4" type="video/mp4">
                 이 브라우저에서는 영상을 재생할 수 없습니다.
               </video>
+              <button class="video-play-button" type="button" aria-label="팀에 배정된 참가자를 취소하는 방법 영상 재생"></button>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details id="feature-map" class="guide-details">
+        <summary>
+          <span class="detail-index">3.3</span>
+          <span class="detail-title">맵</span>
+        </summary>
+
+        <div class="details-body map-guide">
+          <p class="details-lead">
+            맵 구성
+          </p>
+
+          <div class="screenshot-wrap simple-shot">
+            <img
+              src="images/10.MapCard_guide.png"
+              alt="맵 영역의 라벨, 맵 목록과 맵 순서, 버튼 영역"
+            >
+          </div>
+
+          <div class="feature-list three-columns">
+            <div class="feature-item">
+              <span class="feature-number">1</span>
+              <div>
+                <h4>라벨 영역</h4>
+                <p>사용맵·1세트·2세트 중 수정할 항목을 선택합니다.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <span class="feature-number">2</span>
+              <div>
+                <h4>맵 목록 / 맵 순서 영역</h4>
+                <p>리그에서 사용할 맵 목록과 각 세트의 맵 순서가 표시됩니다.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <span class="feature-number">3</span>
+              <div>
+                <h4>버튼 영역</h4>
+                <p>맵 목록이나 맵 순서를 복사하거나, 핀볼 결과를 1세트 또는 2세트에 불러올 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-section">
+            <h4>기본 사용</h4>
+            <p>
+              핀볼 결과를 결과 버튼으로 불러오면 해당 세트의 맵 순서가 자동으로 입력됩니다.
+              입력된 맵 순서는 복사 버튼으로 복사할 수 있습니다.
+            </p>
+
+            <div class="video-wrap team-video playable-video">
+              <video preload="auto" playsinline aria-label="핀볼 결과로 맵 순서를 입력하고 복사하는 기본 사용 방법 영상">
+                <source src="images/11.Map_1set.mp4" type="video/mp4">
+                이 브라우저에서는 영상을 재생할 수 없습니다.
+              </video>
+              <button class="video-play-button" type="button" aria-label="핀볼 결과로 맵 순서를 입력하고 복사하는 기본 사용 방법 영상 재생"></button>
+            </div>
+          </div>
+
+          <div class="video-section guide-subsection">
+            <h4>추가 입력</h4>
+            <p>
+              사용맵 수보다 많은 맵 순서가 필요한 경우에는 핀볼을 한 번 더 진행합니다.
+              첫 번째 핀볼 결과는 결과 버튼으로 불러오고, 추가 추첨에서 필요한 맵만 1세트 또는 2세트를 클릭해 뒤에 직접 입력합니다.
+            </p>
+
+            <p>
+              예를 들어 사용맵이 7개인 9판 5선에서는 두 번째 핀볼 결과의 1·2위 맵을 추가합니다.
+              편집 시 커서는 기존 맵 순서의 맨 뒤에 위치하며, 완성된 맵 순서는 복사 버튼으로 복사할 수 있습니다.
+            </p>
+
+            <div class="video-wrap team-video playable-video">
+              <video preload="auto" playsinline aria-label="추가 핀볼 결과에서 필요한 맵을 맵 순서 뒤에 직접 입력하는 방법 영상">
+                <source src="images/12.Map_2set.mp4" type="video/mp4">
+                이 브라우저에서는 영상을 재생할 수 없습니다.
+              </video>
+              <button class="video-play-button" type="button" aria-label="추가 핀볼 결과에서 필요한 맵을 맵 순서 뒤에 직접 입력하는 방법 영상 재생"></button>
+            </div>
+          </div>
+
+          <div class="guide-subsection">
+            <h4>핀볼 배치</h4>
+            <p>
+              핀볼은 화면 크기에 따라 배치 형태가 달라지며, 두 화면 모두 추첨 후 맵 영역의 결과 버튼을 바로 사용할 수 있도록 배치됩니다.
+            </p>
+          </div>
+
+          <div class="video-section">
+            <h4>기본창</h4>
+            <p>
+              핀볼이 가로형으로 맵 영역 위쪽에 배치됩니다.
+            </p>
+
+            <div class="video-wrap screenshot-wrap app-shot">
+              <img
+                src="images/13.Pinball_normal.png"
+                alt="기본창에서 맵 영역 위쪽에 가로형으로 배치된 핀볼"
+              >
+            </div>
+          </div>
+
+          <div class="video-section">
+            <h4>최대화</h4>
+            <p>
+              핀볼이 세로형으로 오른쪽에 배치되어 맵 영역과 나란히 표시됩니다.
+            </p>
+
+            <div class="video-wrap screenshot-wrap app-shot">
+              <img
+                src="images/14.Pinball_max.png"
+                alt="최대화 화면에서 맵 영역 오른쪽에 세로형으로 배치된 핀볼"
+              >
             </div>
           </div>
         </div>
@@ -412,6 +587,176 @@
   <footer class="site-footer">
     <p>Proleague Manager · Made by 피닉제</p>
   </footer>
+
+  <script>
+    document.querySelectorAll(".playable-video video").forEach((video) => {
+      const playButton = video.parentElement.querySelector(".video-play-button");
+
+      if (!playButton) {
+        return;
+      }
+
+      video.controls = false;
+      video.autoplay = false;
+      video.loop = false;
+
+      playButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+        playButton.hidden = true;
+
+        const playback = video.play();
+        if (playback) {
+          playback.catch(() => {
+            playButton.hidden = false;
+          });
+        }
+      });
+
+      video.addEventListener("click", () => {
+        if (!video.paused && !video.ended) {
+          video.pause();
+          playButton.hidden = false;
+        }
+      });
+
+      video.addEventListener("ended", () => {
+        video.pause();
+        video.currentTime = 0;
+        playButton.hidden = false;
+      });
+    });
+
+    const featureDetails = document.querySelectorAll("#feature-guide > details.guide-details");
+
+    featureDetails.forEach((details) => {
+      details.addEventListener("toggle", () => {
+        if (!details.open) {
+          return;
+        }
+
+        featureDetails.forEach((otherDetails) => {
+          if (otherDetails !== details) {
+            otherDetails.open = false;
+          }
+        });
+      });
+    });
+
+    document.querySelectorAll(".guide-sidebar [data-open-details]").forEach((link) => {
+      link.addEventListener("click", () => {
+        const details = document.querySelector(link.getAttribute("href"));
+
+        if (details) {
+          featureDetails.forEach((otherDetails) => {
+            if (otherDetails !== details) {
+              otherDetails.open = false;
+            }
+          });
+          details.open = true;
+        }
+      });
+    });
+
+    const hero = document.querySelector(".hero");
+    const manual = document.querySelector("#manual");
+    const guideSidebar = document.querySelector(".guide-sidebar");
+
+    if (hero && manual && guideSidebar) {
+      let heroIsVisible = true;
+      let manualIsVisible = false;
+
+      const updateGuideSidebar = () => {
+        const shouldShow = manualIsVisible && !heroIsVisible;
+        guideSidebar.classList.toggle("is-visible", shouldShow);
+        guideSidebar.setAttribute("aria-hidden", String(!shouldShow));
+      };
+
+      const guideSidebarObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === hero) {
+            heroIsVisible = entry.isIntersecting;
+          }
+
+          if (entry.target === manual) {
+            manualIsVisible = entry.isIntersecting;
+          }
+        });
+
+        updateGuideSidebar();
+      }, {
+        rootMargin: "-1px 0px 0px 0px"
+      });
+
+      guideSidebarObserver.observe(hero);
+      guideSidebarObserver.observe(manual);
+
+      const sidebarLinks = new Map(
+        Array.from(guideSidebar.querySelectorAll('a[href^="#"]')).map((link) => [
+          link.getAttribute("href").slice(1),
+          link
+        ])
+      );
+      const trackedIds = [
+        "getting-started",
+        "screen-layout",
+        "feature-guide",
+        "feature-participant",
+        "feature-team",
+        "feature-map"
+      ];
+      const trackedTargets = trackedIds
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+      const spyOffset = 140;
+      let spyUpdateRequested = false;
+
+      const updateActiveSidebarLinks = () => {
+        let activeTarget = null;
+
+        trackedTargets.forEach((target) => {
+          if (target.getBoundingClientRect().top <= spyOffset) {
+            activeTarget = target;
+          }
+        });
+
+        const activeIds = new Set();
+        if (activeTarget) {
+          activeIds.add(activeTarget.id);
+
+          if (activeTarget.matches("details.guide-details")) {
+            activeIds.add("feature-guide");
+          }
+        }
+
+        sidebarLinks.forEach((link, id) => {
+          const isActive = activeIds.has(id);
+          link.classList.toggle("is-active", isActive);
+
+          if (isActive) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+
+        spyUpdateRequested = false;
+      };
+
+      const requestSpyUpdate = () => {
+        if (!spyUpdateRequested) {
+          spyUpdateRequested = true;
+          window.requestAnimationFrame(updateActiveSidebarLinks);
+        }
+      };
+
+      window.addEventListener("scroll", requestSpyUpdate, { passive: true });
+      window.addEventListener("resize", requestSpyUpdate);
+      document.querySelectorAll("details.guide-details").forEach((details) => {
+        details.addEventListener("toggle", requestSpyUpdate);
+      });
+      updateActiveSidebarLinks();
+    }
+  </script>
 
 </body>
 </html>
