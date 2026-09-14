@@ -1379,6 +1379,74 @@ details.guide-details[open] summary::after {
   border-radius: 0;
 }
 
+.funding-table-media {
+  max-width: 614px;
+}
+
+.funding-wide-video {
+  max-width: 754px;
+}
+
+.funding-organizer-shot {
+  max-width: 522px;
+}
+
+.bottom-actions-overview,
+.save-sample-shot {
+  max-width: 1060px;
+}
+
+.save-txt-shot {
+  max-width: 462px;
+}
+
+.bottom-action-media {
+  margin-top: 18px;
+}
+
+.roulette-shot {
+  max-width: 650px;
+}
+
+.timer-shot {
+  max-width: 591px;
+}
+
+.bottom-actions-guide .bottom-action-heading {
+  gap: 8px;
+}
+
+.bottom-actions-guide .bottom-action-heading::before {
+  content: none;
+}
+
+.bottom-action-number {
+  width: 20px;
+  height: 20px;
+  border-width: 1px;
+  box-shadow:
+    0 0 0 1px rgba(124, 58, 237, 0.20),
+    0 1px 3px rgba(15, 23, 42, 0.16);
+  font-size: 10px;
+}
+
+.settlement-dialog-shot {
+  max-width: 328px;
+}
+
+.settlement-participant-shot {
+  max-width: 326px;
+}
+
+.bottom-actions-guide .settlement-mode-heading {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.bottom-actions-guide .settlement-mode-heading::before {
+  content: none;
+}
+
 .video-play-button {
   position: absolute;
   top: 50%;

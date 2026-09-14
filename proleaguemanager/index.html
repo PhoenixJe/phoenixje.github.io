@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Proleague Manager 다운로드 및 사용 설명서">
   <title>Proleague Manager</title>
-  <link rel="stylesheet" href="style.css?v=15">
+  <link rel="stylesheet" href="style.css?v=21">
 </head>
 <body>
 
@@ -74,6 +74,14 @@
       <a class="guide-sidebar-link" href="#feature-map" data-open-details>
         <span class="guide-sidebar-number">3.3</span>
         <span>맵</span>
+      </a>
+      <a class="guide-sidebar-link" href="#feature-funding" data-open-details>
+        <span class="guide-sidebar-number">3.4</span>
+        <span>펀딩</span>
+      </a>
+      <a class="guide-sidebar-link" href="#feature-bottom-actions" data-open-details>
+        <span class="guide-sidebar-number">3.5</span>
+        <span>하단 기능 버튼</span>
       </a>
     </div>
   </nav>
@@ -578,6 +586,233 @@
           </div>
         </div>
       </details>
+
+      <details id="feature-funding" class="guide-details">
+        <summary>
+          <span class="detail-index">3.4</span>
+          <span class="detail-title">펀딩</span>
+        </summary>
+
+        <div class="details-body funding-guide">
+          <p class="details-lead">
+            펀딩 구성
+          </p>
+
+          <div class="screenshot-wrap funding-table-media">
+            <img
+              src="images/15.FundingTable.png"
+              alt="펀딩 입력 영역, 두당 개수, 합계 영역"
+            >
+          </div>
+
+          <div class="feature-list three-columns">
+            <div class="feature-item">
+              <span class="feature-number">1</span>
+              <div>
+                <h4>입력 영역</h4>
+                <p>후원자 닉네임과 펀딩 개수를 입력합니다.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <span class="feature-number">2</span>
+              <div>
+                <h4>두당 개수</h4>
+                <p>등록된 참가자 수를 기준으로 각 펀딩의 두당 개수가 자동으로 계산되어 표시됩니다.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <span class="feature-number">3</span>
+              <div>
+                <h4>합계 영역</h4>
+                <p>입력된 내역의 총 펀딩 개수와 두당 개수 합계를 표시합니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-section guide-subsection">
+            <h4>두당 개수 자동 계산</h4>
+            <p>
+              등록된 참가자 수에 따라 3:3부터 6:6까지의 경기 구성을 자동으로 판단하고, 해당 팀 인원수를 기준으로 두당 개수를 계산합니다.
+            </p>
+            <p>
+              경기 인원을 판단할 수 없는 경우에는 미확정으로 표시됩니다.
+            </p>
+            <p>
+              영상에서는 참가자를 10명에서 9명, 8명으로 변경하며 두당 개수가 자동으로 바뀌는 과정을 보여줍니다.
+            </p>
+
+            <div class="video-wrap funding-wide-video playable-video">
+              <video preload="auto" playsinline aria-label="참가자 수에 따른 두당 개수 자동 계산 영상">
+                <source src="images/16.FundingPerPerson.mp4" type="video/mp4">
+                이 브라우저에서는 영상을 재생할 수 없습니다.
+              </video>
+              <button class="video-play-button" type="button" aria-label="참가자 수에 따른 두당 개수 자동 계산 영상 재생"></button>
+            </div>
+          </div>
+
+          <div class="video-section guide-subsection">
+            <h4>행 자동 추가</h4>
+            <p>
+              마지막 입력 행에 내용을 입력하면 다음 빈 행이 자동으로 추가됩니다.
+            </p>
+            <p>
+              행이 표시 영역을 넘어가면 스크롤바가 생성되어 추가된 내역을 계속 확인할 수 있습니다.
+            </p>
+
+            <div class="video-wrap funding-table-media playable-video">
+              <video preload="auto" playsinline aria-label="펀딩 입력 행 자동 추가 영상">
+                <source src="images/17.FundingRows.mp4" type="video/mp4">
+                이 브라우저에서는 영상을 재생할 수 없습니다.
+              </video>
+              <button class="video-play-button" type="button" aria-label="펀딩 입력 행 자동 추가 영상 재생"></button>
+            </div>
+          </div>
+
+          <div class="video-section guide-subsection">
+            <h4>모드별 표시</h4>
+            <p>
+              펀딩 기능은 진행자 모드와 참가자 모드에서 동일하게 동작합니다.
+            </p>
+            <p>
+              참가자 모드에서는 왼쪽 상단에 크게 표시되며, 진행자 모드에서는 오른쪽 하단에 축소된 형태로 표시됩니다.
+            </p>
+            <p>
+              합계는 참가자 모드에서는 테이블 아래에 파란 글씨로, 진행자 모드에서는 테이블의 합계 행으로 표시됩니다.
+            </p>
+
+            <div class="video-wrap screenshot-wrap funding-organizer-shot">
+              <img
+                src="images/18.FundingOrganizer.png"
+                alt="진행자 모드 오른쪽 하단의 펀딩 영역과 테이블 내부 합계 행"
+              >
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details id="feature-bottom-actions" class="guide-details">
+        <summary>
+          <span class="detail-index">3.5</span>
+          <span class="detail-title">하단 기능 버튼</span>
+        </summary>
+
+        <div class="details-body bottom-actions-guide">
+          <div class="screenshot-wrap bottom-actions-overview">
+            <img
+              src="images/19.BottomActionButtons.png"
+              alt="저장부터 정산까지 번호가 표시된 하단 기능 버튼 전체"
+            >
+          </div>
+
+          <div class="guide-subsection">
+            <h4 class="bottom-action-heading"><span class="feature-number bottom-action-number">1</span>저장</h4>
+            <p>현재 프로그램에 입력된 내용을 TXT 파일로 내 문서\Proleague Manager 폴더에 저장합니다.</p>
+            <p>프로그램의 입력 내용은 자동으로 유지되므로, <strong>이 버튼은 프로그램 상태를 저장하는 기능이 아닙니다.</strong></p>
+
+            <div class="screenshot-wrap save-sample-shot bottom-action-media">
+              <img
+                src="images/20.SaveSample.png"
+                alt="저장할 샘플 내용이 입력된 Proleague Manager 화면"
+              >
+            </div>
+
+            <div class="screenshot-wrap save-txt-shot bottom-action-media">
+              <img
+                src="images/21.SaveTxt.png"
+                alt="저장된 TXT 파일을 메모장에서 연 화면"
+              >
+            </div>
+          </div>
+
+          <div class="guide-subsection">
+            <h4 class="bottom-action-heading"><span class="feature-number bottom-action-number">2</span>리셋</h4>
+            <p>현재 프로그램에 입력된 내용을 초기화합니다.</p>
+          </div>
+
+          <div class="guide-subsection">
+            <h4 class="bottom-action-heading"><span class="feature-number bottom-action-number">3</span>핀볼</h4>
+            <p>핀볼 창을 실행합니다.</p>
+            <p>핀볼 창의 기본창과 최대화 화면은 3.3 맵에서 확인할 수 있습니다.</p>
+          </div>
+
+          <div class="guide-subsection">
+            <h4 class="bottom-action-heading"><span class="feature-number bottom-action-number">4</span>룰렛</h4>
+            <p>네이버 룰렛을 엽니다.</p>
+
+            <div class="screenshot-wrap roulette-shot bottom-action-media">
+              <img
+                src="images/22.Roulette.png"
+                alt="룰렛 버튼으로 연 네이버 룰렛 화면"
+              >
+            </div>
+          </div>
+
+          <div class="guide-subsection">
+            <h4 class="bottom-action-heading"><span class="feature-number bottom-action-number">5</span>타이머</h4>
+            <p>네이버 타이머를 엽니다.</p>
+
+            <div class="screenshot-wrap timer-shot bottom-action-media">
+              <img
+                src="images/23.Timer.png"
+                alt="타이머 버튼으로 연 네이버 타이머 화면"
+              >
+            </div>
+          </div>
+
+          <div class="guide-subsection">
+            <h4 class="bottom-action-heading"><span class="feature-number bottom-action-number">6</span>Elo</h4>
+            <p>Eloboard 사이트를 엽니다.</p>
+          </div>
+
+          <div class="guide-subsection">
+            <h4 class="bottom-action-heading"><span class="feature-number bottom-action-number">7</span>정산</h4>
+            <p>모드 선택에서 설정한 사용자명을 기준으로 정산 내용을 구성하고, 확인한 내용을 바탕으로 정산 결과를 계산합니다.</p>
+          </div>
+
+          <div class="guide-subsection">
+            <h4>정산 확인</h4>
+            <p>정산 버튼을 누르면 설정한 사용자와 같은 팀 참가자의 정보를 불러와 정산할 내용을 확인할 수 있습니다.</p>
+          </div>
+
+          <div class="guide-subsection">
+            <h4 class="settlement-mode-heading">진행자 모드</h4>
+            <p>진행자 모드에서는 설정한 사용자의 펀딩 개수와 같은 팀 참가자의 이름·펀딩 개수가 자동으로 입력됩니다.</p>
+
+            <div class="screenshot-wrap settlement-dialog-shot bottom-action-media">
+              <img
+                src="images/24.Settlement_Organizer.png"
+                alt="사용자와 같은 팀 참가자의 이름과 펀딩 개수가 입력된 진행자 모드 정산 확인창"
+              >
+            </div>
+          </div>
+
+          <div class="guide-subsection">
+            <h4 class="settlement-mode-heading">참가자 모드</h4>
+            <p>참가자 모드에서는 설정한 사용자의 펀딩 개수와 같은 팀 참가자의 이름이 자동으로 입력되며, 팀원들의 펀딩 개수만 직접 입력하면 됩니다.</p>
+
+            <div class="screenshot-wrap settlement-dialog-shot settlement-participant-shot bottom-action-media">
+              <img
+                src="images/25.Settlement_Participant.png"
+                alt="팀원 이름이 입력되고 펀딩 개수를 편집하는 참가자 모드 정산 확인창"
+              >
+            </div>
+          </div>
+
+          <div class="guide-subsection">
+            <h4>정산 결과</h4>
+            <p>정산 확인창에서 결과 버튼을 누르면 받을 금액과 보낼 금액이 자동으로 계산되어 영수증 형태로 표시됩니다.</p>
+
+            <div class="screenshot-wrap settlement-dialog-shot bottom-action-media">
+              <img
+                src="images/26.Settlement_Result.png"
+                alt="받을 금액과 보낼 금액이 계산된 정산 결과 영수증"
+              >
+            </div>
+          </div>
+        </div>
+      </details>
     </section>
 
     <!-- 이후 설명서 항목은 이 아래에 같은 구조로 추가하면 됩니다. -->
@@ -702,7 +937,9 @@
         "feature-guide",
         "feature-participant",
         "feature-team",
-        "feature-map"
+        "feature-map",
+        "feature-funding",
+        "feature-bottom-actions"
       ];
       const trackedTargets = trackedIds
         .map((id) => document.getElementById(id))
